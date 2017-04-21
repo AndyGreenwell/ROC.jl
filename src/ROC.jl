@@ -6,7 +6,7 @@ module ROC
 		roc,
 		AUC,
 		PPV,
-		cutoffs,
+		cutoffs
 
 	include("rocdata.jl")
 	include("roc_main.jl")
