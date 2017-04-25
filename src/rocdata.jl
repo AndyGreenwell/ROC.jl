@@ -90,12 +90,12 @@ function roc(_preparedrocdata::_PreparedROCData)
 	n = length(_preparedrocdata.labels)
 	N = n - P
 	ni = 1:(n-1)
-	TP = Array(Int,ni.stop)
-	TN = Array(Int,ni.stop)
-	FP = Array(Int,ni.stop)
-	FN = Array(Int,ni.stop)
-	FPR = Array(Float64,ni.stop)
-	TPR = Array(Float64,ni.stop)
+	TP = Array{Int}(ni.stop)
+	TN = Array{Int}(ni.stop)
+	FP = Array{Int}(ni.stop)
+	FN = Array{Int}(ni.stop)
+	FPR = Array{Float64}(ni.stop)
+	TPR = Array{Float64}(ni.stop)
 	for i in ni
 		Pi = sum(_preparedrocdata.labels[1:i])
 		TP[i] = Pi
